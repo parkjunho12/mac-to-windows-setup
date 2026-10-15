@@ -1,0 +1,72 @@
+{
+  "format": "mac-to-windows/aside-preferences-v1",
+  "capturedAt": "2026-10-15T09:33:32.567Z",
+  "settings": {
+    "compaction": {
+      "enabled": true,
+      "reserveTokens": 16384,
+      "keepRecentTokens": 20000,
+      "thresholdPercent": 85
+    },
+    "retry": {
+      "enabled": true,
+      "maxRetries": 3,
+      "baseDelayMs": 2000,
+      "maxDelayMs": 60000
+    },
+    "followUpBehavior": "queue",
+    "sidepanelSessionOnTabChange": "new-session",
+    "sidebarRecentChatLimit": "3",
+    "timezone": "Asia/Seoul",
+    "agentTabs": {
+      "closeAfterIdleMinutes": 15
+    },
+    "agentTaskNotifications": {
+      "needsAttention": true,
+      "taskCompletions": true,
+      "routineCompletions": true
+    },
+    "completionSound": {
+      "enabled": true
+    },
+    "memory": {
+      "enabled": true,
+      "episodicRetentionDays": 0,
+      "dreamingMinHours": 24,
+      "dreamingMinSessions": 5
+    }
+  },
+  "modelReferences": {
+    "defaultModel": {
+      "provider": "openai-codex",
+      "modelId": "gpt-6.1-sol",
+      "thinkingLevel": "high",
+      "fastMode": false
+    },
+    "modelCategories": {
+      "deep": {
+        "provider": "claude-code",
+        "modelId": "claude-fable-5-1",
+        "thinkingLevel": "high",
+        "fastMode": false
+      }
+    }
+  },
+  "excluded": [
+    "credentials",
+    "cookies",
+    "accounts",
+    "private keys",
+    "SSH targets",
+    "sessions",
+    "transcripts",
+    "memories",
+    "projects",
+    "routine prompts",
+    "permissions and trust grants",
+    "payment/communication settings",
+    "custom commands/environment",
+    "hooks",
+    "device identifiers"
+  ]
+}

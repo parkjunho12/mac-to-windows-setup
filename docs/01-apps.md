@@ -4,7 +4,8 @@
 
 | 현재 Mac에서 확인 | Windows에서 사용할 것 | 우선순위·주의 |
 | --- | --- | --- |
-| Aside.app | [Aside Windows](https://aside.com/download) | 필수. 새로 설치·로그인. Mac 전용 도구까지 동일하다는 뜻은 아님 |
+| Aside.app | [Aside Windows](https://aside.com/download) | 필수. 새로 설치·로그인. [실제 환경설정 가져오기](08-agent-settings.md) |
+| Orca.app | [Orca Windows](https://www.onorca.dev/download) | 개발용 에이전트 작업 환경. [실제 설정 40개와 Windows 전환](08-agent-settings.md) |
 | Google Chrome | Chrome Windows | 필수. 본인 계정의 동기화 항목을 선택, 회사·개인 프로필 분리 |
 | KakaoTalk | 카카오톡 Windows | 필수. PC 인증·대화 복원 가능 범위 직접 확인. Mac 로컬 DB 복사 금지 |
 | Hancom Office HWP | Windows용 한컴오피스 | 필수. HWP 편집·인쇄·보안모듈 검사, Mac 라이선스 재사용 여부 확인 |

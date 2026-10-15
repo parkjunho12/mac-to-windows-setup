@@ -1,14 +1,18 @@
 # 맥 → Windows 새 PC 환경 구축
 
-> 박준호 업무·개발 환경 기준 / 조사일: 2026-10-15 KST / 비공개 운영자료
+> 박준호 업무·개발 환경 기준 / 조사일: 2026-10-15 KST / 공개용 선별 자료
 
 **목표는 맥을 복제하는 것이 아니라, Windows에서 같은 업무를 할 수 있게 만드는 것입니다.**
 
 현재 맥의 앱·Homebrew·프로젝트 설정·Aside 루틴을 읽어 작성했습니다. 새 PC에는 접속하지 않았으므로 CPU, Windows 에디션, RAM, 설치 완료 여부는 아직 모릅니다. 아래는 **구축 가이드와 설치 보조 도구**이며, 새 PC에 설치했다는 뜻이 아닙니다.
 
+## Orca·Aside 설정도 가져오려면
+
+**[실제 환경설정 묶음과 가져오기 안내](profiles/README.md)**를 먼저 보세요. 맥에서 추출한 Aside 10개 설정 그룹, Orca 40개 설정 항목과 Aside 적용 도우미를 추가했습니다. 로그인·대화·메모리 본문·SSH·업무 스킬은 공개 묶음에서 제외했습니다. Orca는 공식 설정 UI에서 값을 재현하는 방식이며 DB를 덮어쓰지 않습니다.
+
 ## 권장 구성
 
-- **Windows 11 직접 실행:** Aside, Chrome, Cursor, 카카오톡, 한글, Word/Excel/PowerPoint, 업무사이트, Tailscale.
+- **Windows 11 직접 실행:** Aside, Orca, Chrome, Cursor, 카카오톡, 한글, Word/Excel/PowerPoint, 업무사이트, Tailscale.
 - **WSL2 Ubuntu 24.04:** Git, Node 22/24, Python, 개발용 CLI와 프로젝트 소스. 맥 터미널 업무를 여기로 옮깁니다.
 - **Docker Desktop + WSL 통합:** 컨테이너와 개발 DB. 맥의 Docker 이미지/볼륨을 통째로 복사하지 않습니다.
 - **기존 맥 당분간 유지:** kmsg 카카오톡 수집, AppleScript/Apple Notes 등 macOS 전용 자동화. Windows에서 동등 동작을 확인하기 전에는 끄지 않습니다.
@@ -27,9 +31,9 @@
 
 Mac 전용 앱을 Windows 실행 파일로 복사하지 않습니다. 각 제품의 Windows 설치 파일과 라이선스가 필요합니다.
 
-### 2. 새 PC에서 이 비공개 저장소 받기
+### 2. 새 PC에서 이 저장소 받기
 
-GitHub 웹에 `parkjunho12` 계정으로 로그인 → **Code → Download ZIP** → 압축 해제. Git/GitHub CLI를 설치한 뒤에는 `gh auth login`으로 로그인하고 clone해도 됩니다. ZIP을 받는 단계에는 Git 설치가 필요 없습니다.
+저장소 페이지 → **Code → Download ZIP** → 압축 해제. 공개 저장소라 ZIP 다운로드에 GitHub 로그인이 필요 없습니다. Git/GitHub CLI를 설치한 뒤에는 clone해도 됩니다. 업무용 비공개 프로젝트에는 별도 로그인이 필요합니다.
 
 PowerShell에서 압축 해제한 폴더로 이동합니다. 스크립트를 먼저 읽고, 다운로드 차단 표식을 해제합니다.
 
@@ -75,6 +79,8 @@ Unblock-File .\scripts\Install-WindowsApps.ps1
 - [Windows 상태 점검](scripts/Test-WindowsSetup.ps1): 읽기 전용, 비밀번호·토큰·파일 내용을 읽지 않음.
 - [조사 근거와 한계](inventory/mac-observed.md)
 - [공식 자료](docs/07-sources.md)
+- [08 Orca·Aside 환경설정 가져오기](docs/08-agent-settings.md)
+- [실제 설정 프로필](profiles/README.md)
 
 ## 이번 작업에서 하지 않은 것
 
